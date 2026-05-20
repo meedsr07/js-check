@@ -7,17 +7,19 @@ console.log(result);
 function bubbleSortAnalyzer(arr, comparator) {
     let swp = 0;
     let itration = 0;
-    for (let i = 0 ; i < arr.length ; i++) {
-        let swped = false 
-        for (let j = 0 ; j < arr.length -1 -i ; j++) {
+    for (let i = 0; i < arr.length; i++) {
+        let swapd = false
+        for (let j = 0; j < arr.length - 1 - i; j++) {
             itration++
-            if (comparator(arr[j] , arr[j+1]) > 0) {
+            if (comparator(arr[j], arr[j + 1]) > 0) {
                 swp++
-                [arr[j] , arr[j+1]] = [arr[j+1] , arr[j]] 
-                swped = true
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
+                swapd = true
             }
         }
-        if (!swped) break ;
+        if (!swapd) {
+            break
+        }
     }
     return {
         sortedArray: arr,
